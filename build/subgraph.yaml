@@ -1,6 +1,6 @@
 specVersion: 0.0.4
 schema:
-  file: ./schema.graphql
+  file: schema.graphql
 dataSources:
   - kind: ethereum
     name: KRL
@@ -17,8 +17,8 @@ dataSources:
         - Transfer
       abis:
         - name: KRL
-          file: ./abis/KRL.json
+          file: KRL/abis/KRL.json
       eventHandlers:
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransfer
-      file: ./src/krl.ts
+      file: KRL/KRL.wasm
